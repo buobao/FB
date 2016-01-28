@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/action_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true">
+            <Button
+                android:id="@+id/btn_change_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change"/>
+            <Button
+                android:id="@+id/btn_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                />
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map"
+                />
+            <Button
+                android:id="@+id/btn_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/btn_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mail"
+                />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action_buttons"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

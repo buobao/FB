@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:scrollbars="none"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/main_menu_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="菜单1"
+            android:drawableRight="@drawable/table_arrow" />
+
+        <TextView
+            android:id="@+id/main_menu_linkman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="菜单2"
+            android:drawableRight="@drawable/table_arrow" />
+
+        <TextView
+            android:id="@+id/main_menu_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="菜单3"
+            android:drawableRight="@drawable/table_arrow" />
+
+        <TextView
+            android:id="@+id/main_menu_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="菜单4"
+            android:drawableRight="@drawable/table_arrow" />
+
+        <TextView
+            android:id="@+id/main_menu_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="菜单5"
+            android:drawableRight="@drawable/table_arrow"/>
+
+    </LinearLayout>
+</ScrollView>

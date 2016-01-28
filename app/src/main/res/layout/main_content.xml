@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/super_container"-->
+        <!--android:orientation="vertical">-->
+        <com.turman.fb.activity.demo.layout.MyListLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <include layout="@layout/message_list_view" />
+        </com.turman.fb.activity.demo.layout.MyListLayout>
+
+    <!--</LinearLayout>-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/black"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="信息"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/tab1"
+            />
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@android:color/black"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="项目"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/tab2"
+            />
+        <View
+            android:layout_width="1px"
+            android:layout_height="30dp"
+            android:background="@android:color/black"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="其他"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/tab3"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

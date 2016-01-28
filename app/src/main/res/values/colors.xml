@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+
+    <color name="transparent">#00000000</color>
+
+    <!-- BaseColor -->
+    <color name="colorDark">#AF000000</color>
+    <color name="colorBlack">#FF333333</color>
+    <color name="colorRed">#FFFF0000</color>
+    <color name="colorGray">#FF666666</color>
+    <color name="colorLightGray">#FF9A9A9A</color>
+    <color name="colorLightestGray">#0A000000</color>
+    <color name="colorWhiteGray">#FFF5F5F5</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorOrange">#FFFF7700</color>
+    <color name="colorGreen">#FF449900</color>
+    <color name="colorBlue">#FF2277BB</color>
+    <color name="colorDarkBlue">#FF385487</color>
+
+    <!-- 默认主题色 -->
+    <color name="base_theme_color">@color/colorBlue</color>
+    <!-- 默认界面背景色 -->
+    <color name="base_window_bg_color">#FFEBEBEA</color>
+    <!-- 默认Item背景色 -->
+    <color name="base_item_bg_color_default">@color/colorWhite</color>
+    <color name="base_item_bg_color_pressed">#FFF1F1F1</color>
+    <!-- 默认Item字体色 -->
+    <color name="base_item_text_color_default">@color/colorDark</color>
+    <color name="base_item_text_color_pressed">@color/colorDarkBlue</color>
+    <!-- 默认列表分割线颜色 -->
+    <color name="base_divider_color">#FFDADADA</color>
+
+    <!-- TweetTextView -->
+    <color name="main_link_text_color">#FF507DAF</color>
+    <color name="timeline_clickable_text_highlighted_background">#FFBEDFFF</color>
+
+    <!-- CalenderView -->
+    <color name="calender_gray_light">#FFDDDDDD</color>
+    <color name="calender_blue_light">#FF33B5E5</color>
+    <color name="calender_green_light">#FF8FCC85</color>
+
+    <color name="calender_divider">@color/calender_gray_light</color>
+    <color name="calender_item_week_text">@color/colorLightGray</color>
+    <color name="calender_item_day_text">@color/colorBlack</color>
+    <color name="calender_item_day_text_dis">@color/colorLightGray</color>
+    <color name="calender_item_day_text_sel">@color/colorWhite</color>
+    <color name="calender_item_day_bg">@color/colorWhite</color>
+
+    <!-- SearchToolView -->
+    <color name="search_tool_background">@color/base_window_bg_color</color>
+</resources>

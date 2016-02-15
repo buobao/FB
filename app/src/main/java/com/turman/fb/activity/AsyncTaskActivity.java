@@ -1,7 +1,5 @@
 package com.turman.fb.activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
@@ -126,9 +124,9 @@ public class AsyncTaskActivity extends Activity {
             }
         });
 
-        Animator anim2 = AnimatorInflater.loadAnimator(this, R.anim.mydefine);
-        anim2.setTarget(textView_2);
-        anim2.start();
+//        Animator anim2 = AnimatorInflater.loadAnimator(this, R.anim.mydefine);
+//        anim2.setTarget(textView_2);
+//        anim2.start();
 
     }
 

@@ -35,7 +35,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.ListViewActivity.ListViewActivity"
+            android:name=".example.IndexActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateUnchanged"
@@ -52,6 +52,8 @@
             android:name=".activity.Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".example.activitys.ViewFlipperAvtivity"/>
+        <activity android:name=".example.activitys.ViewFlipperActivity2"/>
     </application>
 
 </manifest>

@@ -55,6 +55,7 @@
         <activity android:name=".example.activitys.ViewFlipperAvtivity"/>
         <activity android:name=".example.activitys.ViewFlipperActivity2"/>
         <activity android:name=".example.toast.ToastActivity"/>
+        <activity android:name=".example.notification.NotificationActivity"/>
     </application>
 
 </manifest>

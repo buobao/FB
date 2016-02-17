@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.turman.fb.R;
 import com.turman.fb.example.activitys.ViewFlipperActivity2;
 import com.turman.fb.example.activitys.ViewFlipperAvtivity;
+import com.turman.fb.example.alertdialog.AlertDialogActivity;
+import com.turman.fb.example.alertdialog.AlertDialogActivity2;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.toast.ToastActivity;
 
@@ -31,6 +33,10 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx3.setOnClickListener(this);
         TextView tx4 = (TextView) findViewById(R.id.Notification);
         tx4.setOnClickListener(this);
+        TextView tx5 = (TextView) findViewById(R.id.AlertDialog);
+        tx5.setOnClickListener(this);
+        TextView tx6 = (TextView) findViewById(R.id.AlertDialog2);
+        tx6.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +57,12 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.Notification:
                 intent.setComponent(new ComponentName(IndexActivity.this, NotificationActivity.class));
+                break;
+            case R.id.AlertDialog:
+                intent.setComponent(new ComponentName(IndexActivity.this, AlertDialogActivity.class));
+                break;
+            case R.id.AlertDialog2:
+                intent.setComponent(new ComponentName(IndexActivity.this, AlertDialogActivity2.class));
                 break;
         }
         startActivity(intent);

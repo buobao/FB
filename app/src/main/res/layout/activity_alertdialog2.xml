@@ -8,15 +8,9 @@
     >
 
     <Button
-        android:text="Show"
+        android:id="@+id/dialog_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_show"
-        />
-    <Button
-        android:text="Close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_close"
+        android:text="Dialog"
         />
 </LinearLayout>

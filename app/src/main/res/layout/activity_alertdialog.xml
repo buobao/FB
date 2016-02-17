@@ -8,15 +8,30 @@
     >
 
     <Button
-        android:text="Show"
+        android:id="@+id/btn_dialog_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_show"
+        android:text="one"
         />
+
     <Button
-        android:text="Close"
+        android:id="@+id/btn_dialog_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_close"
+        android:text="two"
+        />
+
+    <Button
+        android:id="@+id/btn_dialog_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="three"
+        />
+
+    <Button
+        android:id="@+id/btn_dialog_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="four"
         />
 </LinearLayout>

@@ -38,6 +38,7 @@ public class AlertDialogActivity2 extends AppCompatActivity  {
         final LayoutInflater inflater = AlertDialogActivity2.this.getLayoutInflater();
         view_custom = inflater.inflate(R.layout.view_dialog_custom, null, false);
 
+        //通过setView将layout设置给alertDialog，并对layout中的view设置click事件
         builder.setView(view_custom);
         builder.setCancelable(false);
         alert = builder.create();

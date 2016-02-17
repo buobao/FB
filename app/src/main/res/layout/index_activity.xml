@@ -26,6 +26,14 @@
             android:id="@+id/ViewFlipper2"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toast1"
+            android:gravity="center_horizontal"
+            android:id="@+id/Toast1"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

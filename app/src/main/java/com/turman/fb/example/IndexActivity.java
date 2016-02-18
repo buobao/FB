@@ -12,6 +12,7 @@ import com.turman.fb.example.activitys.ViewFlipperActivity2;
 import com.turman.fb.example.activitys.ViewFlipperAvtivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity2;
+import com.turman.fb.example.alertdialog.AlertDialogActivity3;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.toast.ToastActivity;
 
@@ -37,6 +38,8 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx5.setOnClickListener(this);
         TextView tx6 = (TextView) findViewById(R.id.AlertDialog2);
         tx6.setOnClickListener(this);
+        TextView tx7 = (TextView) findViewById(R.id.AlertDialog3);
+        tx7.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +66,9 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.AlertDialog2:
                 intent.setComponent(new ComponentName(IndexActivity.this, AlertDialogActivity2.class));
+                break;
+            case R.id.AlertDialog3:
+                intent.setComponent(new ComponentName(IndexActivity.this, AlertDialogActivity3.class));
                 break;
         }
         startActivity(intent);

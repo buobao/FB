@@ -14,6 +14,7 @@ import com.turman.fb.example.alertdialog.AlertDialogActivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity2;
 import com.turman.fb.example.alertdialog.AlertDialogActivity3;
 import com.turman.fb.example.notification.NotificationActivity;
+import com.turman.fb.example.popupwindow.PopUpWindowActivity;
 import com.turman.fb.example.toast.ToastActivity;
 
 /**
@@ -40,6 +41,8 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx6.setOnClickListener(this);
         TextView tx7 = (TextView) findViewById(R.id.AlertDialog3);
         tx7.setOnClickListener(this);
+        TextView tx8 = (TextView) findViewById(R.id.PopUpWindow);
+        tx8.setOnClickListener(this);
     }
 
     @Override
@@ -69,6 +72,9 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.AlertDialog3:
                 intent.setComponent(new ComponentName(IndexActivity.this, AlertDialogActivity3.class));
+                break;
+            case R.id.PopUpWindow:
+                intent.setComponent(new ComponentName(IndexActivity.this, PopUpWindowActivity.class));
                 break;
         }
         startActivity(intent);

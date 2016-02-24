@@ -13,9 +13,12 @@ import com.turman.fb.example.activitys.ViewFlipperAvtivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity2;
 import com.turman.fb.example.alertdialog.AlertDialogActivity3;
+import com.turman.fb.example.broadcast.BroadcastActivity;
+import com.turman.fb.example.broadcast.demo.LoginActivity;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.popupwindow.PopUpWindowActivity;
 import com.turman.fb.example.service.TestServiceActivity;
+import com.turman.fb.example.service.demo.ServiceDemoActivity;
 import com.turman.fb.example.toast.ToastActivity;
 
 /**
@@ -46,6 +49,12 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx8.setOnClickListener(this);
         TextView tx9 = (TextView) findViewById(R.id.Service1);
         tx9.setOnClickListener(this);
+        TextView tx10 = (TextView) findViewById(R.id.ServiceDemo);
+        tx10.setOnClickListener(this);
+        TextView tx11 = (TextView) findViewById(R.id.Broadcast);
+        tx11.setOnClickListener(this);
+        TextView tx12 = (TextView) findViewById(R.id.BroadcastDemo);
+        tx12.setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +90,15 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.Service1:
                 intent.setComponent(new ComponentName(IndexActivity.this, TestServiceActivity.class));
+                break;
+            case R.id.ServiceDemo:
+                intent.setComponent(new ComponentName(IndexActivity.this, ServiceDemoActivity.class));
+                break;
+            case R.id.Broadcast:
+                intent.setComponent(new ComponentName(IndexActivity.this, BroadcastActivity.class));
+                break;
+            case R.id.BroadcastDemo:
+                intent.setComponent(new ComponentName(IndexActivity.this, LoginActivity.class));
                 break;
         }
         startActivity(intent);

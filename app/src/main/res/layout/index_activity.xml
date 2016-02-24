@@ -82,6 +82,30 @@
             android:id="@+id/Service1"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ServiceDemo"
+            android:gravity="center_horizontal"
+            android:id="@+id/ServiceDemo"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Broadcast"
+            android:gravity="center_horizontal"
+            android:id="@+id/Broadcast"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BroadcastDemo"
+            android:gravity="center_horizontal"
+            android:id="@+id/BroadcastDemo"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

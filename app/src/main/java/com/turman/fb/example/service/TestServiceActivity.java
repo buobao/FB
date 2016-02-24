@@ -94,6 +94,25 @@ public class TestServiceActivity extends Activity {
             }
         });
 
+        //启动三次service3
+        Intent intent2 = new Intent("com.turman.fb.example.service.TEST_SERVICE3");
+        Bundle b1 = new Bundle();
+        b1.putString("param", "s1");
+        intent2.putExtras(b1);
+
+        Intent intent3 = new Intent("com.turman.fb.example.service.TEST_SERVICE3");
+        Bundle b2 = new Bundle();
+        b2.putString("param", "s2");
+        intent3.putExtras(b2);
+
+        Intent intent4 = new Intent("com.turman.fb.example.service.TEST_SERVICE3");
+        Bundle b3 = new Bundle();
+        b3.putString("param","s3");
+        intent4.putExtras(b3);
+
+        startService(intent2);
+        startService(intent3);
+        startService(intent4);
     }
 }
 

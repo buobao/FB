@@ -47,7 +47,9 @@
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="mydefine"/>
+                <!--加上这个会在打开的默认程序里面显示当前的app-->
+                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -70,6 +72,7 @@
         <activity android:name=".example.broadcast.BroadcastActivity"/>
         <activity android:name=".example.broadcast.demo.LoginActivity"/>
         <activity android:name=".example.contentprovider.ContentProviderActivity"/>
+        <activity android:name=".example.intent.IntentActivity"/>
         <activity android:name=".example.broadcast.demo.SubjectActivity"
             android:theme="@style/AppTheme"
             />

@@ -106,6 +106,14 @@
             android:id="@+id/BroadcastDemo"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ContentProvider"
+            android:gravity="center_horizontal"
+            android:id="@+id/ContentProvider"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

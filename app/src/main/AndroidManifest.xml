@@ -73,6 +73,7 @@
         <activity android:name=".example.broadcast.demo.LoginActivity"/>
         <activity android:name=".example.contentprovider.ContentProviderActivity"/>
         <activity android:name=".example.intent.IntentActivity"/>
+        <activity android:name=".example.fragment.SimpleFragmentActivity"/>
         <activity android:name=".example.broadcast.demo.SubjectActivity"
             android:theme="@style/AppTheme"
             />

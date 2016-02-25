@@ -122,6 +122,14 @@
             android:id="@+id/Intent1"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple fragment"
+            android:gravity="center_horizontal"
+            android:id="@+id/Simple_fragment"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

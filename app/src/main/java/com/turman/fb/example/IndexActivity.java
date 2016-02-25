@@ -16,6 +16,7 @@ import com.turman.fb.example.alertdialog.AlertDialogActivity3;
 import com.turman.fb.example.broadcast.BroadcastActivity;
 import com.turman.fb.example.broadcast.demo.LoginActivity;
 import com.turman.fb.example.contentprovider.ContentProviderActivity;
+import com.turman.fb.example.fragment.SimpleFragmentActivity;
 import com.turman.fb.example.intent.IntentActivity;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.popupwindow.PopUpWindowActivity;
@@ -61,6 +62,8 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx13.setOnClickListener(this);
         TextView tx14 = (TextView) findViewById(R.id.Intent1);
         tx14.setOnClickListener(this);
+        TextView tx15 = (TextView) findViewById(R.id.Simple_fragment);
+        tx15.setOnClickListener(this);
     }
 
     @Override
@@ -111,6 +114,9 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.Intent1:
                 intent.setComponent(new ComponentName(IndexActivity.this, IntentActivity.class));
+                break;
+            case R.id.Simple_fragment:
+                intent.setComponent(new ComponentName(IndexActivity.this, SimpleFragmentActivity.class));
                 break;
         }
         startActivity(intent);

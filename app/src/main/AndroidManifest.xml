@@ -5,6 +5,7 @@
     <!-- 扩展存储读写权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--这是网络权限-->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- 通过NFC传输文件,通过该方式传输的文件需要是扩展存储器存储的文件，需要先开启上面的权限 -->
@@ -74,6 +75,8 @@
         <activity android:name=".example.contentprovider.ContentProviderActivity"/>
         <activity android:name=".example.intent.IntentActivity"/>
         <activity android:name=".example.fragment.SimpleFragmentActivity"/>
+        <activity android:name=".example.sqlite.SqliteActivity"/>
+        <activity android:name=".example.http.HtmlActivity"/>
         <activity android:name=".example.broadcast.demo.SubjectActivity"
             android:theme="@style/AppTheme"
             />

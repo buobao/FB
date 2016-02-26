@@ -130,6 +130,22 @@
             android:id="@+id/Simple_fragment"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sqlite"
+            android:gravity="center_horizontal"
+            android:id="@+id/Sqlite"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Http test"
+            android:gravity="center_horizontal"
+            android:id="@+id/Http"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

@@ -17,11 +17,13 @@ import com.turman.fb.example.broadcast.BroadcastActivity;
 import com.turman.fb.example.broadcast.demo.LoginActivity;
 import com.turman.fb.example.contentprovider.ContentProviderActivity;
 import com.turman.fb.example.fragment.SimpleFragmentActivity;
+import com.turman.fb.example.http.HtmlActivity;
 import com.turman.fb.example.intent.IntentActivity;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.popupwindow.PopUpWindowActivity;
 import com.turman.fb.example.service.TestServiceActivity;
 import com.turman.fb.example.service.demo.ServiceDemoActivity;
+import com.turman.fb.example.sqlite.SqliteActivity;
 import com.turman.fb.example.toast.ToastActivity;
 
 /**
@@ -64,6 +66,10 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx14.setOnClickListener(this);
         TextView tx15 = (TextView) findViewById(R.id.Simple_fragment);
         tx15.setOnClickListener(this);
+        TextView tx16 = (TextView) findViewById(R.id.Sqlite);
+        tx16.setOnClickListener(this);
+        TextView tx17 = (TextView) findViewById(R.id.Http);
+        tx17.setOnClickListener(this);
     }
 
     @Override
@@ -117,6 +123,12 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.Simple_fragment:
                 intent.setComponent(new ComponentName(IndexActivity.this, SimpleFragmentActivity.class));
+                break;
+            case R.id.Sqlite:
+                intent.setComponent(new ComponentName(IndexActivity.this, SqliteActivity.class));
+                break;
+            case R.id.Http:
+                intent.setComponent(new ComponentName(IndexActivity.this, HtmlActivity.class));
                 break;
         }
         startActivity(intent);

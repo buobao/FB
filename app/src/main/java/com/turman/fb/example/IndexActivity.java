@@ -25,6 +25,7 @@ import com.turman.fb.example.service.TestServiceActivity;
 import com.turman.fb.example.service.demo.ServiceDemoActivity;
 import com.turman.fb.example.sqlite.SqliteActivity;
 import com.turman.fb.example.toast.ToastActivity;
+import com.turman.fb.httpclient.HttpClientActivity;
 
 /**
  * Created by dqf on 2016/2/16.
@@ -70,6 +71,8 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx16.setOnClickListener(this);
         TextView tx17 = (TextView) findViewById(R.id.Http);
         tx17.setOnClickListener(this);
+        TextView tx18 = (TextView) findViewById(R.id.HttpClient);
+        tx18.setOnClickListener(this);
     }
 
     @Override
@@ -129,6 +132,9 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.Http:
                 intent.setComponent(new ComponentName(IndexActivity.this, HtmlActivity.class));
+                break;
+            case R.id.HttpClient:
+                intent.setComponent(new ComponentName(IndexActivity.this, HttpClientActivity.class));
                 break;
         }
         startActivity(intent);

@@ -77,6 +77,7 @@
         <activity android:name=".example.fragment.SimpleFragmentActivity"/>
         <activity android:name=".example.sqlite.SqliteActivity"/>
         <activity android:name=".example.http.HtmlActivity"/>
+        <activity android:name=".httpclient.HttpClientActivity"/>
         <activity android:name=".example.broadcast.demo.SubjectActivity"
             android:theme="@style/AppTheme"
             />

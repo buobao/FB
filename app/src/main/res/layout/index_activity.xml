@@ -146,6 +146,14 @@
             android:id="@+id/Http"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Http client test"
+            android:gravity="center_horizontal"
+            android:id="@+id/HttpClient"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

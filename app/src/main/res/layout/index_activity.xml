@@ -154,6 +154,46 @@
             android:id="@+id/HttpClient"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Web View"
+            android:gravity="center_horizontal"
+            android:id="@+id/WebView"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawable"
+            android:gravity="center_horizontal"
+            android:id="@+id/Drawable"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RX"
+            android:gravity="center_horizontal"
+            android:id="@+id/Rxjava"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DRAW"
+            android:gravity="center_horizontal"
+            android:id="@+id/draw_view"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ActionBar"
+            android:gravity="center_horizontal"
+            android:id="@+id/action_bar_index"
+            android:layout_marginTop="20dp"
+            />
     </LinearLayout>
 </ScrollView>
 

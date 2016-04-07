@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.turman.fb.R;
+import com.turman.fb.example.actionbaractivity.ActionActivity;
 import com.turman.fb.example.activitys.ViewFlipperActivity2;
 import com.turman.fb.example.activitys.ViewFlipperAvtivity;
 import com.turman.fb.example.alertdialog.AlertDialogActivity;
@@ -16,15 +17,19 @@ import com.turman.fb.example.alertdialog.AlertDialogActivity3;
 import com.turman.fb.example.broadcast.BroadcastActivity;
 import com.turman.fb.example.broadcast.demo.LoginActivity;
 import com.turman.fb.example.contentprovider.ContentProviderActivity;
+import com.turman.fb.example.definedview.DefinedActivity;
+import com.turman.fb.example.drable.DrawableActivity;
 import com.turman.fb.example.fragment.SimpleFragmentActivity;
 import com.turman.fb.example.http.HtmlActivity;
 import com.turman.fb.example.intent.IntentActivity;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.popupwindow.PopUpWindowActivity;
+import com.turman.fb.example.rxjava.RxJaveActivity;
 import com.turman.fb.example.service.TestServiceActivity;
 import com.turman.fb.example.service.demo.ServiceDemoActivity;
 import com.turman.fb.example.sqlite.SqliteActivity;
 import com.turman.fb.example.toast.ToastActivity;
+import com.turman.fb.example.webview.WebviewAvtivity;
 import com.turman.fb.httpclient.HttpClientActivity;
 
 /**
@@ -73,6 +78,16 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx17.setOnClickListener(this);
         TextView tx18 = (TextView) findViewById(R.id.HttpClient);
         tx18.setOnClickListener(this);
+        TextView tx19 = (TextView) findViewById(R.id.WebView);
+        tx19.setOnClickListener(this);
+        TextView tx20 = (TextView) findViewById(R.id.Drawable);
+        tx20.setOnClickListener(this);
+        TextView tx21 = (TextView) findViewById(R.id.Rxjava);
+        tx21.setOnClickListener(this);
+        TextView tx22 = (TextView) findViewById(R.id.draw_view);
+        tx22.setOnClickListener(this);
+        TextView tx23 = (TextView) findViewById(R.id.action_bar_index);
+        tx23.setOnClickListener(this);
     }
 
     @Override
@@ -135,6 +150,21 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.HttpClient:
                 intent.setComponent(new ComponentName(IndexActivity.this, HttpClientActivity.class));
+                break;
+            case R.id.WebView:
+                intent.setComponent(new ComponentName(IndexActivity.this, WebviewAvtivity.class));
+                break;
+            case R.id.Drawable:
+                intent.setComponent(new ComponentName(IndexActivity.this, DrawableActivity.class));
+                break;
+            case R.id.Rxjava:
+                intent.setComponent(new ComponentName(IndexActivity.this, RxJaveActivity.class));
+                break;
+            case R.id.draw_view:
+                intent.setComponent(new ComponentName(IndexActivity.this, DefinedActivity.class));
+                break;
+            case R.id.action_bar_index:
+                intent.setComponent(new ComponentName(IndexActivity.this, ActionActivity.class));
                 break;
         }
         startActivity(intent);

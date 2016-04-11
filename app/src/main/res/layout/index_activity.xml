@@ -194,6 +194,17 @@
             android:id="@+id/action_bar_index"
             android:layout_marginTop="20dp"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvage"
+            android:gravity="center_horizontal"
+            android:id="@+id/salvage"
+            android:layout_marginTop="20dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
     </LinearLayout>
 </ScrollView>
 

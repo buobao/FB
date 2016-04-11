@@ -81,6 +81,7 @@
         <activity android:name=".httpclient.HttpClientActivity"/>
         <activity android:name=".example.webview.WebviewAvtivity"/>
         <activity android:name=".example.drable.DrawableActivity"/>
+        <activity android:name="com.turman.fb.example.salvage.SalvageActivity"/>
         <activity android:name=".example.definedview.DefinedActivity"/>
         <activity android:name=".example.broadcast.demo.SubjectActivity"
             android:theme="@style/AppTheme"

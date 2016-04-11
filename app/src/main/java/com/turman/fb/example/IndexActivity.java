@@ -25,6 +25,7 @@ import com.turman.fb.example.intent.IntentActivity;
 import com.turman.fb.example.notification.NotificationActivity;
 import com.turman.fb.example.popupwindow.PopUpWindowActivity;
 import com.turman.fb.example.rxjava.RxJaveActivity;
+import com.turman.fb.example.salvage.SalvageActivity;
 import com.turman.fb.example.service.TestServiceActivity;
 import com.turman.fb.example.service.demo.ServiceDemoActivity;
 import com.turman.fb.example.sqlite.SqliteActivity;
@@ -88,6 +89,8 @@ public class IndexActivity extends Activity implements View.OnClickListener {
         tx22.setOnClickListener(this);
         TextView tx23 = (TextView) findViewById(R.id.action_bar_index);
         tx23.setOnClickListener(this);
+        TextView tx24 = (TextView) findViewById(R.id.salvage);
+        tx24.setOnClickListener(this);
     }
 
     @Override
@@ -165,6 +168,9 @@ public class IndexActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.action_bar_index:
                 intent.setComponent(new ComponentName(IndexActivity.this, ActionActivity.class));
+                break;
+            case R.id.salvage:
+                intent.setComponent(new ComponentName(IndexActivity.this, SalvageActivity.class));
                 break;
         }
         startActivity(intent);

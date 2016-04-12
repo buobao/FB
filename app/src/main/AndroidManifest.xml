@@ -41,7 +41,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".example.newservice.ServiceTestActivity"
+            android:name=".example.definedlist.MyListActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateUnchanged"

@@ -60,7 +60,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             Toast.makeText(LoginActivity.this, "哟，竟然蒙对了~", Toast.LENGTH_SHORT).show();
             finish();
         }else{
-            Toast.makeText(LoginActivity.this,"这么简单都输出，脑子呢？",Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,"这么简单都输错，脑子呢？",Toast.LENGTH_SHORT).show();
         }
     }
 }

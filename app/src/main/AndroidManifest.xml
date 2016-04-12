@@ -132,6 +132,13 @@
                 <action android:name = "android.intent.cation.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".example.broadcast.DefinedReceiver">
+            <intent-filter>
+                <action android:name="com.turman.fb.example.broadcast.DefinedReceiver"/>
+            </intent-filter>
+        </receiver>
+
         
         <provider
             android:authorities="com.turman.fb.example.contentprovider.demo.myprovider"

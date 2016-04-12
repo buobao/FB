@@ -17,6 +17,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.turman.fb.R;
+import com.turman.fb.example.newhttp.HttpUtils;
+import com.turman.fb.example.newhttp.NatureHttp;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by dqf on 2016/2/26.
@@ -30,8 +39,8 @@ public class HtmlActivity extends AppCompatActivity {
     private Bitmap bitmap;
     private String detail = "";
     private boolean flag = false;
-    private final static String PIC_URL = "http://ww2.sinaimg.cn/large/7a8aed7bgw1evshgr5z3oj20hs0qo0vq.jpg";
-    private final static String HTML_URL = "http://www.qq.com";
+    private final static String PIC_URL = "http://scimg.jb51.net/allimg/160317/14-16031G13220936.jpg";
+    private final static String HTML_URL = "http://api2.juheapi.com/alexa/historical";
 
     //用于刷新页面
     private Handler handler = new Handler(){
@@ -53,7 +62,7 @@ public class HtmlActivity extends AppCompatActivity {
                 case 0x003:
                     hideAllWiget();
                     webView.setVisibility(View.VISIBLE);
-                    webView.loadDataWithBaseURL("", detail, "text/html", "UTF-8", "");
+                    webView.loadDataWithBaseURL(null, detail, "text/html", "UTF-8", null);
                     Toast.makeText(HtmlActivity.this,"网页加载完毕",Toast.LENGTH_SHORT).show();
                     break;
                 default:break;
@@ -88,7 +97,7 @@ public class HtmlActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuInflater inflater = new MenuInflater(this);
-        inflater.inflate(R.menu.menus,menu);
+        inflater.inflate(R.menu.menus, menu);
         super.onCreateContextMenu(menu, v, menuInfo);
     }
 
@@ -98,27 +107,68 @@ public class HtmlActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.one:
+
                 new Thread(){
                     @Override
                     public void run() {
-                        try {
-                            byte[] data = GetData.getImage(PIC_URL);
-                            bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        handler.sendEmptyMessage(0x001);
+                        HttpUtils.getInstance(HtmlActivity.this).loadImage(PIC_URL,imgPic);
+//                        try {
+//                            byte[] data = GetData.getImage(PIC_URL);
+//                            bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                        handler.sendEmptyMessage(0x001);
+//                        hideAllWiget();
+//                        imgPic.setVisibility(View.VISIBLE);
+//                        imgPic.setImageBitmap(bitmap);
+//                        Toast.makeText(HtmlActivity.this, "图片加载完毕", Toast.LENGTH_SHORT).show();
                     }
                 }.start();
                 break;
             case R.id.two:
                 new Thread() {
                     public void run() {
+//                        try {
+//                            detail = GetData.getHtml(HTML_URL);
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+                        Map<String,String> params = new HashMap<String, String>();
+                        params.put("site","baidu.com");
+                        params.put("key","5aa99d050566a3c1564678d7b13f3352");
+                        params.put("start","2016-01-01");
+                        params.put("range", "1");
+                        String result = NatureHttp.sendGet(HTML_URL,params);
+                        System.out.println("This is net work get data result :"+result);
+
+                        //解析json
                         try {
-                            detail = GetData.getHtml(HTML_URL);
-                        } catch (Exception e) {
+                            JSONObject object = new JSONObject(result);
+                            System.out.println("error_code:"+object.getInt("error_code"));
+                            System.out.println("reason:"+object.getString("reason"));
+                            System.out.println("result:"+object.getString("result"));
+
+                            JSONObject obj = new JSONObject(object.getString("result"));
+                            JSONArray arr = obj.getJSONArray("data");
+                            for (int i=0;i<arr.length();i++){
+                                JSONObject obj1 = arr.getJSONObject(i);
+                                System.out.println("i:"+i);
+                                System.out.println("date:"+obj1.getString("date"));
+                                System.out.println("id:"+obj1.getString("id"));
+                                System.out.println("rank:"+obj1.getString("rank"));
+                                System.out.println("site:"+obj1.getString("site"));
+                                JSONObject sub1 = obj1.getJSONObject("pageViews");
+                                System.out.println("perMillion:"+sub1.getString("perMillion"));
+                                System.out.println("perUser:"+sub1.getString("perUser"));
+                                JSONObject sub2 = obj1.getJSONObject("reach");
+                                System.out.println("perMillion:"+sub2.getString("perMillion"));
+                            }
+
+                        } catch (JSONException e) {
                             e.printStackTrace();
                         }
+
                         handler.sendEmptyMessage(0x002);
                     }
                 }.start();

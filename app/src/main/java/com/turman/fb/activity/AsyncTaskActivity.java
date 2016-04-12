@@ -27,29 +27,29 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by dqf on 2016/1/12.
  */
 public class AsyncTaskActivity extends Activity {
 
-    @InjectView(R.id.imageView)
+    @Bind(R.id.imageView)
     protected ImageView mImageView;
-    @InjectView(R.id.button)
+    @Bind(R.id.button)
     protected Button mButton;
-    @InjectView(R.id.progressBar)
+    @Bind(R.id.progressBar)
     protected ProgressBar mProgressBar;
-    @InjectView(R.id.input)
+    @Bind(R.id.input)
     protected EditText editText;
-    @InjectView(R.id.btn_show)
+    @Bind(R.id.btn_show)
     protected Button mbuttonShow;
-    @InjectView(R.id.textView_1)
+    @Bind(R.id.textView_1)
     protected TextView textView_1;
-    @InjectView(R.id.textView_2)
+    @Bind(R.id.textView_2)
     protected TextView textView_2;
-    @InjectView(R.id.btn_show1)
+    @Bind(R.id.btn_show1)
     protected Button mbuttonShow1;
 
     @Override
@@ -57,7 +57,7 @@ public class AsyncTaskActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_imagedown);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override

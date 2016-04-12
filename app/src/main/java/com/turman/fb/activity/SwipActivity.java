@@ -10,8 +10,8 @@ import com.turman.fb.R;
 import com.turman.fb.fragment.FrontFragment;
 import com.turman.fb.fragment.ImageFragment;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by dqf on 2016/1/8.
@@ -20,7 +20,7 @@ public class SwipActivity extends Activity implements View.OnClickListener {
 
     private boolean mShowingBack = false;
 
-    @InjectView(R.id.container)
+    @Bind(R.id.container)
     protected View container;
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -28,7 +28,7 @@ public class SwipActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction().add(R.id.container, new FrontFragment()).commit();
